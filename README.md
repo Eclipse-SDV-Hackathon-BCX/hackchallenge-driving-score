@@ -10,6 +10,8 @@ In this hack challenge, you can
 - **explore the Eclipse SDV ecosystem** of open source projects, such as programming models, middleware and protocol implementations.
 - **combine exciting open source technology** from robotics, internet of things, cloud and automotive
 
+![](assets/driving-score-intro.drawio.png)
+
 The rough plan is to read vehicle data such as speed, acceleration and break information into a Vehicle App, **calculate a driving score** based on these input data and then send the score to another service - maybe an alert to the driver, or a remote webservice, visualize it on a dashboard or use it as a feedback input to a self-learning AI algorithm. It's up to your hack team's creativity.
 
 Your hack team should have the following skills:
