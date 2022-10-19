@@ -21,3 +21,7 @@
 - Write a [k8s Pod](https://kubernetes.io/docs/concepts/workloads/pods/) or [k8s Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) spec for your app and put it into `/data/server/manifests/` on the Eclipse Leda quickstart image, or apply it with `kubectl apply -f myapp.yml`
 - On Eclipse Leda, you can use [k9s](https://k9scli.io/) to manage the containers, watch log files etc.
 
+
+## Deployment on a Testcar with Eclipse Muto
+- For the hackathon, you can continue to use the simulator environment or deploy your system to one of the SDV Fleet testcars with muto. TODO: (Link)
+
