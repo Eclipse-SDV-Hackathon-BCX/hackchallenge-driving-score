@@ -13,6 +13,8 @@
 ## Hints for Driving Score calculation
 
 - Use the [Eclipse Velocitas Python Template](https://github.com/eclipse-velocitas/vehicle-app-python-template)
+- Use the [Eclipse Muto Node Template (Python)] to add an in-vehicle implementation of drive score node that subscribes to AckermannDrive message (TODO: Github code )
+- Use the [Eclipse Muto LiveUI Template (React Javascript)] to add visualization widget of drive score for a racecar or the complete fleet to the dashbaord (TODO: Github code )
 - Subscribe to the `Vehicle.Speed` data points. You may need the `timestamp` for proper calculation of the acceleration.
 - The most complicated task is to calculate the jerk:
     
