@@ -22,6 +22,6 @@
 - On Eclipse Leda, you can use [k9s](https://k9scli.io/) to manage the containers, watch log files etc.
 
 
-## Deployment on a Testcar with Eclipse Muto
+## Deployment on a Piracer with Eclipse Muto
 - For the hackathon, you can continue to use the simulator environment or deploy your system to one of the SDV Fleet testcars with muto. TODO: (Link)
 
