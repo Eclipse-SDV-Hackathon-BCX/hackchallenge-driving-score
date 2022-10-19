@@ -27,6 +27,12 @@ The overall dataflow could like like the following (from bottom to top):
 
 - References: [MDPI Whitepaper](https://www.mdpi.com/2079-9292/8/9/943/htm)
 
+
+## Example Data Flow (ROS)
+
+TODO:
+
+
 ## Hints
 
 - Think of the physical vehicle (chassis, motor, powertrain etc.) as a black box system for this hackathon. Accelerator position is an input into the vehicle, same goes for position of the steering wheel.
