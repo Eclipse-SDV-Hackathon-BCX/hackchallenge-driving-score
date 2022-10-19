@@ -1,9 +1,15 @@
 # Hack Challenge "Driving Score"
+## Step 0 - Evaluate SDV Domains
+
+You can choose to use any one of the SDV domains such as Eclipse Leda, or Eclipse Muto (ROS Domain), which will provide you the tools including in-vehicle data collection, sharing data to the cloud as well as building dashboards and widgets to visualize your solutios. Please refer to [Step 2: Architecture and Data Flow](./step-2-architecture-data-flow.md) for potential data flows. 
+
 ## Step 1 - Identify needed input signals
 
 The [Vehicle Signal Specification](https://github.com/COVESA/vehicle_signal_specification) is supported by [Eclipse Velocitas](https://github.com/eclipse-velocitas) and [Eclipse Kuksa.VAL Databroker](https://github.com/eclipse/kuksa.val). The [Kuksa.VAL DBC Feeder](https://github.com/eclipse/kuksa.val.feeders) has an example recording of raw vehicle signals in the form of a [recorded CAN-Bus network session log](https://github.com/eclipse/kuksa.val.feeders/blob/main/dbc2val/candump.log) file, including the mapping to a specific vehicle model.
 
-It's the easiest way to get simulated data. It's a static recording and will run in a loop though, you won't be able to influence the simulation. However, all of these components can be run in a docker container, which makes it easy and convenient to use - and even run on a headless edge device with a container runtime. In a later step, if you have more time, check out some other vehicle simulators such as [CARLA](https://carla.readthedocs.io/) or [F1Tenth](https://f1tenth.readthedocs.io/en/stable/), maybe you can integrate these as well. 
+It's the easiest way to get simulated data. It's a static recording and will run in a loop though, you won't be able to influence the simulation. However, all of these components can be run in a docker container, which makes it easy and convenient to use - and even run on a headless edge device with a container runtime. In a later step, if you have more time, check out some other vehicle simulators such as [CARLA](https://carla.readthedocs.io/) or [F1Tenth](https://f1tenth.readthedocs.io/en/stable/), maybe you can integrate these as well.
+
+ROS domain can provide you drive data from a simulated racecar driving in race tracks using different maps.  You can have the test car drive autonomously with reactive algorithms such as gap follower, time eleastic band (TB) with global and local planners or manually using keyboard or a joystick.   F1Tenth.org reactive algorithms such as and simulted vehicles. You can use all the the sensor data published by the simulator and AckermannDrive messages for the information such as the steering angles, velocity etc. [F1Tenth] TODO: Provide a page with quick video descriptions
 
 ## Vehicle Signals
 
@@ -55,5 +61,21 @@ We'll be using Eclipse Kuksa's DBC Feeder to read some pre-recorded data and fee
     Use `subscribe SELECT Vehicle.Speed WHERE Vehicle.Speed > 0` you would get continuous updates.
 
 In your application, you will access the Eclipse Kuksa Data Broker by its gRPC interface instead of the databroker-cli tool.
+
+## Drive Messages from ROS
+
+Muto will make it very easy to start and collect data from the F1Tenth race car. Just follow these steps to get Muto and F1Tenth race car running:
+
+TODO: Add the steps and the video link
+
+## Start a simulated racecar with Muto
+
+TODO: 
+
+## Add and display telemetry for Drive messages
+
+TODO: 
+
+
 
 Next: [Step 2: Architecture and Data Flow](./step-2-architecture-data-flow.md)
