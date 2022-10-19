@@ -20,4 +20,10 @@ This list of components is based on the example architecture and data flow. If y
 - A container registry, eg GitHub packages, Docker Hub, canister.io or https://ttl.sh/
 - [Eclipse Leda](https://github.com/eclipse-leda/leda-distro) quickstart images on the provided SD-Cards during the hackathon for your target devices.
 
+## Example List of components (ROS)
+
+TODO: ROS/Muto/Kuksa/Ditto
+
+
+
 Next: [Step 4: Implement the driving score vehicle app](./step-4-driving-score-app.md)
