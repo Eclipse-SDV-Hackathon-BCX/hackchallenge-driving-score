@@ -1,5 +1,7 @@
 # Eclipse SDV Hackathon on BCX2022
 
+One-Pager ([PowerPoint](./assets/BCX_Onepager_DriverScore_A0.pptx), [PDF](./assets/BCX_Onepager_DriverScore_A0.pdf))
+
 # Welcome to the "Driving Score" hack challenge!
 
 Your goal is to **improve the quality of a driver's driving style**. The use case is well-known, there are already some commercial offerings available. As a hack challenge for Eclipse SDV, it's a good use case to try out the involved technology and experience some of the challenges when dealing with connected vehicles. You will also get to know a few more open source projects along the way.
