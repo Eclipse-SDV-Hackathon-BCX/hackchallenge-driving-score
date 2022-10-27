@@ -1,0 +1,70 @@
+muto:
+  stack_topic: /stack
+  twin_topic: /twin
+  type: simulator
+  twin_url: "http://ditto:ditto@sandbox.composiv.ai"
+  commands:
+      - name: ros/topic
+        service: rostopic_list
+        plugin: CommandPlugin
+      - name: ros/topic/info
+        service: rostopic_info
+        plugin: CommandPlugin
+      - name: ros/topic/echo
+        service: rostopic_echo
+        plugin: CommandPlugin
+      - name: ros/node
+        service: rosnode_list
+        plugin: CommandPlugin
+      - name: ros/node/info
+        service: rosnode_info
+        plugin: CommandPlugin
+      - name: ros/param
+        service: rosparam_list
+        plugin: CommandPlugin
+      - name: ros/param/get
+        service: rosparam_get
+        plugin: CommandPlugin
+  pipelines:
+      - name:  start
+        pipeline:
+          - sequence:
+            - service: muto_compose
+              plugin: ComposePlugin
+            - service: muto_start_stack
+              plugin: ComposePlugin
+        compensation:
+          - service: muto_kill_stack
+            plugin: ComposePlugin   
+      - name:  kill
+        pipeline:
+          - sequence:
+            - service: muto_compose
+              plugin: ComposePlugin
+            - service: muto_kill_stack
+              plugin: ComposePlugin
+        compensation:
+          - service: muto_kill_stack
+            plugin: ComposePlugin 
+      - name:  apply
+        pipeline:
+          - sequence:
+            - service: muto_compose
+              plugin: ComposePlugin
+            - service: muto_apply_stack
+              plugin: ComposePlugin
+        compensation:
+          - service: muto_kill_stack
+            plugin: ComposePlugin 
+  mqtt:
+    host: sandbox.composiv.ai # subject to change
+    port: 1883
+    keep_alive: 60
+    user: none
+    password: none
+  thing:
+    namespace: org.eclipse.muto.sandbox.f1tenth # subject to change
+    anonymous: False  # Use this for automatically generated id (uuid based)
+    #   if anonymous is True or anynoymous param is missing, name/id will be auto generated
+    # TODO: edit the name below
+    name: mike-yaml-demo
