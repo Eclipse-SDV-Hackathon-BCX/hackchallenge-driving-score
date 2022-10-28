@@ -18,7 +18,7 @@ This list of components is based on the example architecture and data flow. If y
 - [Eclipse Velocitas](https://github.com/eclipse-velocitas) as toolchain and framework for implementing the driving score business logic. Use the [template repositories](https://github.com/orgs/eclipse-velocitas/repositories?q=template&type=all&language=&sort=) as a quick starting guide. There's also a [tutorial](https://websites.eclipseprojects.io/velocitas/docs/tutorials/).
 - Use Docker to build, package and deploy your app to a container registry.
 - A container registry, eg GitHub packages, Docker Hub, canister.io or https://ttl.sh/
-- [Eclipse Leda](https://github.com/eclipse-leda/leda-distro) quickstart images on the provided SD-Cards during the hackathon for your target devices.
+- [Eclipse Leda](https://github.com/eclipse-leda/leda-distro) quickstart images on the provided SD-Cards during the hackathon for your target devices. If you need to reflash, you can download a [snapshot Leda build for Raspberry Pi 4](https://swdcdownloads.blob.core.windows.net/%24web/sdv-image-all-raspberrypi4-64.wic.bz2)
 
 ## Example List of components (ROS)
 
