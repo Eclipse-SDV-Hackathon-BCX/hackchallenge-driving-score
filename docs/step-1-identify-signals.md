@@ -70,6 +70,19 @@ TODO: Add the steps and the video link
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Start a simulated racecar with Muto
 
 We'll use a Muto docker image to start a simulated racecar by following the given steps. 
@@ -77,58 +90,25 @@ We'll use a Muto docker image to start a simulated racecar by following the give
 
 After [installing](https://docs.docker.com/engine/install/ubuntu/) docker on your system;
 
-## Create the "buildall" shell file in order to clone needed files into your directory.
 
-Build base ROS image with adiitional ros packages (i.e. ackermann), python packages.
- 
-## Clone f1tenth gap-wall follower examples
-```bash
-git clone git@gitlab.eteration.com:composiv/f1tenth/learning/cass_wall_follower.git docker/demo/src/cass_wall_follower
-```
-```bash
-git clone git@gitlab.eteration.com:composiv/f1tenth/learning/cass_gap_follower.git docker/demo/src/cass_gap_follower
-```
-```bash
-git clone git@gitlab.eteration.com:composiv/f1tenth/learning/cass_safety.git docker/demo/src/cass_safety
-```
-
-and set python3 as default python.
-```bash
-docker build -t  composiv/ros:noetic-desktop-full docker/ros
-```
-
-## Build base muto image ontop of ROS (previous step)
-## Adds msgs, -core, agent and composer + default launch and config files
+To start the simulator 
 
 ```bash
-docker build -t  composiv/muto:latest docker/muto/
-```
-## Build base muto image with f1tenth + teb demo algorithms on top of Muto (previous step)
-   
-   Adds also creates a rosbridge for ws (roserver suite).
-
-```bash
-docker build -t  composiv/muto-demo:latest docker/demo/
+docker run --rm -it -v $(pwd)/example.yaml:/home/muto/launch/config/muto.yaml -p 7777:7777 composiv/muto-demo:latest /bin/bash -c "source devel/setup.bash && roslaunch launch/muto.launch".
 ```
 
-## Launch LiveUI
+Here you can substitute your own ```.yaml ``` file for ```example.yaml``` using the command above. It replaces the yaml file then runs the simulator.
 
-Now we'll use the given commands to launch the dashboard.
+Navigate to `https://dashboard.composiv.ai/`.
 
-1. 
-```bash
-npm install
-```
-2. 
-```bash
-npm run start
-```
-
-The dashboard should open in your designated brower.
 
 In the dashboard go to ``Vehicles``.
 
+You need to see that your vehicle is online from `Vehicles --> Vehicle Panel`
+
 Select the online vehicle.
+
+## Setting Stacks
 
 Go to ``Stacks``.
 
@@ -136,19 +116,26 @@ For the demonstration select `Example - Reactive Gap Follower` and click `set`.
 
 Then your stack is set on the designated vehicle. Now you should be able to start the stack on the vehicle by clicking `start`.
 
+
+
 ## Foxglove
 
 Now, we'll run the commmands necessary to visualize the simulation through foxglove.
 
-To start the simulator 
+Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
 
-```bash
-docker run --rm -it -v $(pwd)/mike.yaml:/home/muto/launch/config/muto.yaml -p 7777:7777 composiv/muto-demo:latest /bin/bash -c "source devel/setup.bash && roslaunch launch/muto.launch"
-```
+Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777&layoutId=40dfc0af-7cda-4dca-8b6c-d303bfa01543).
 
-Now here you can substitute your own ```.yaml ``` file for ```mike.yaml``` using the command above. It replaces the yaml file then runs the simulator.
+You can source the [.json](../assets/FoxgloveLayout-F1Tenth.json) file and run the simuation.
 
-After the successful start, open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
+
+IF you have any issues following the steps above, the alternate way to start the simulation is given below
+
+
+
+## Alternate
+
+Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
 
 The given popup will greet you here. 
 
@@ -192,25 +179,6 @@ A : Steer Left.
 S : Go Backward.
 
 D : Steer Right.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

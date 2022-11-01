@@ -1,0 +1,156 @@
+{
+  "configById": {
+    "3D!18i6zy7": {
+      "layers": {
+        "845139cb-26bc-40b3-8161-8ab60af4baf5": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "845139cb-26bc-40b3-8161-8ab60af4baf5",
+          "layerId": "foxglove.Grid",
+          "size": 100,
+          "lineWidth": 1,
+          "color": "#248eff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 1,
+          "divisions": 200
+        },
+        "366228cc-fdcd-40d3-b620-c3ee42723419": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "URDF",
+          "instanceId": "366228cc-fdcd-40d3-b620-c3ee42723419",
+          "layerId": "foxglove.Urdf",
+          "url": "https://raw.githubusercontent.com/Eclipse-SDV-Hackathon-BCX/hackchallenge-driving-score/main/sources/muto/robot.urdf",
+          "order": 2
+        }
+      },
+      "cameraState": {
+        "perspective": true,
+        "distance": 31.733468832176133,
+        "phi": 60.5574842211631,
+        "thetaOffset": 5.919970870743549,
+        "targetOffset": [
+          -15.090151914397397,
+          2.2687844135057667,
+          4.123853432310975e-16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-none",
+      "followTf": "map",
+      "scene": {
+        "labelScaleFactor": 0,
+        "ignoreColladaUpAxis": true,
+        "backgroundColor": "#000000"
+      },
+      "transforms": {
+        "frame:front_left_wheel": {
+          "visible": false
+        },
+        "frame:front_right_wheel": {
+          "visible": false
+        },
+        "frame:laser": {
+          "visible": false
+        },
+        "frame:front_right_hinge": {
+          "visible": false
+        },
+        "frame:laser_model": {
+          "visible": true
+        },
+        "frame:front_left_hinge": {
+          "visible": false
+        },
+        "frame:back_right_wheel": {
+          "visible": false
+        },
+        "frame:back_left_wheel": {
+          "visible": false
+        },
+        "frame:base_link": {
+          "visible": false
+        }
+      },
+      "topics": {
+        "/map": {
+          "visible": true
+        },
+        "/scan": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "rgbByteOrder": "rgba",
+          "pointSize": 8
+        },
+        "/gt_pose": {
+          "visible": false
+        },
+        "/cass_gap_follower/disparities": {
+          "visible": false,
+          "colorField": "intensity",
+          "colorMode": "flat",
+          "colorMap": "turbo",
+          "rgbByteOrder": "rgba",
+          "flatColor": "#fafafa",
+          "pointSize": 11,
+          "pointShape": "square"
+        }
+      },
+      "publish": {
+        "type": "pose_estimate",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      }
+    },
+    "Publish!2rm6me6": {
+      "topicName": "/key",
+      "datatype": "std_msgs/String",
+      "buttonText": "Publish",
+      "buttonTooltip": "",
+      "buttonColor": "#00A871",
+      "advancedView": true,
+      "value": "{\n  \"data\": \"n\"\n}"
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "first": "3D!18i6zy7",
+    "second": "Publish!2rm6me6",
+    "direction": "row",
+    "splitPercentage": 70
+  }
+}
