@@ -117,7 +117,7 @@ Then your stack is set on the designated vehicle. Now you should be able to star
 
 Now, we'll run the commmands necessary to visualize the simulation through foxglove.
 
-- Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
+
 - Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777&layoutId=40dfc0af-7cda-4dca-8b6c-d303bfa01543).
 - You can source the [.json](../assets/FoxgloveLayout-F1Tenth.json) file and run the simuation.
 
