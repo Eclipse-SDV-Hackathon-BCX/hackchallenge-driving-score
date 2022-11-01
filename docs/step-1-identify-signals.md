@@ -161,17 +161,17 @@ The data type should appear automatically, in case it doesn't, the data type is 
 
 ## Keystroke inputs for publish panel
 
-- N : Navigate i.e Autopilot.
+- n : Navigate i.e Autopilot.
 
-- K : Switch the input device to Keyboard.
+- k : Switch the input device to Keyboard.
 
-- W : Go Forward.
+- w : Go Forward.
 
-- A : Steer Left.
+- a : Steer Left.
 
-- S : Go Backward.
+- s : Go Backward.
 
-- D : Steer Right.
+- d : Steer Right.
 
 
 
