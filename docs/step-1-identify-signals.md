@@ -121,8 +121,11 @@ Now, we'll run the commmands necessary to visualize the simulation through foxgl
 - Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777&layoutId=40dfc0af-7cda-4dca-8b6c-d303bfa01543).
 - You can source the [.json](../assets/FoxgloveLayout-F1Tenth.json) file and run the simuation.
 
+![](../assets/simulation.png)
 
-IF you have any issues following the steps above, the alternate way to start the simulation is given below
+
+
+*IF you have any issues following the steps above, the alternate way to start the simulation is given below*
 
 
 
