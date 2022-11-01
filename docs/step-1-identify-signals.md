@@ -99,20 +99,15 @@ docker run --rm -it -v $(pwd)/example.yaml:/home/muto/launch/config/muto.yaml -p
 
 Here you can substitute your own ```.yaml ``` file for ```example.yaml``` using the command above. It replaces the yaml file then runs the simulator.
 
-Navigate to `https://dashboard.composiv.ai/`.
-
-
-In the dashboard go to ``Vehicles``.
-
-You need to see that your vehicle is online from `Vehicles --> Vehicle Panel`
-
-Select the online vehicle.
+- Navigate to `https://dashboard.composiv.ai/`.
+- In the dashboard go to ``Vehicles``.
+- You need to see that your vehicle is online from `Vehicles --> Vehicle Panel`
+- Select the online vehicle.
 
 ## Setting Stacks
 
-Go to ``Stacks``.
-
-For the demonstration select `Example - Reactive Gap Follower` and click `set`.
+- Go to ``Stacks``.
+- For the demonstration select `Example - Reactive Gap Follower` and click `set`.
 
 Then your stack is set on the designated vehicle. Now you should be able to start the stack on the vehicle by clicking `start`.
 
@@ -122,11 +117,9 @@ Then your stack is set on the designated vehicle. Now you should be able to star
 
 Now, we'll run the commmands necessary to visualize the simulation through foxglove.
 
-Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
-
-Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777&layoutId=40dfc0af-7cda-4dca-8b6c-d303bfa01543).
-
-You can source the [.json](../assets/FoxgloveLayout-F1Tenth.json) file and run the simuation.
+- Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
+- Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777&layoutId=40dfc0af-7cda-4dca-8b6c-d303bfa01543).
+- You can source the [.json](../assets/FoxgloveLayout-F1Tenth.json) file and run the simuation.
 
 
 IF you have any issues following the steps above, the alternate way to start the simulation is given below
@@ -135,24 +128,24 @@ IF you have any issues following the steps above, the alternate way to start the
 
 ## Alternate
 
-Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
+- Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
 
 The given popup will greet you here. 
 
 ![](../assets/foxglove1.png)
 
-1. Navigate to ``Open connection``. Then the given page will greet you.
+- Navigate to ``Open connection``. Then the given page will greet you.
 
 
 ![](../assets/foxglove2.png)
 
 Here the default value is ``ws://localhost:9090``. 
 
-2. Substitute ``9090`` with your desired port ID (the set given to you will have 7777 as the port ID).
+- Substitute ``9090`` with your desired port ID (the set given to you will have 7777 as the port ID).
 
-After this step you can click Open.
+- After this step you can click Open.
 
-Now, you'll need to click `Add Panel` (3rd from the top)
+- Now, you'll need to click `Add Panel` (3rd from the top)
 
 ![](../assets/foxglove3.png)
 
@@ -168,17 +161,17 @@ The data type should appear automatically, in case it doesn't, the data type is 
 
 ## Keystroke inputs for publish panel
 
-N : Navigate i.e Autopilot.
+- N : Navigate i.e Autopilot.
 
-K : Switch the input device to Keyboard.
+- K : Switch the input device to Keyboard.
 
-W : Go Forward.
+- W : Go Forward.
 
-A : Steer Left.
+- A : Steer Left.
 
-S : Go Backward.
+- S : Go Backward.
 
-D : Steer Right.
+- D : Steer Right.
 
 
 
