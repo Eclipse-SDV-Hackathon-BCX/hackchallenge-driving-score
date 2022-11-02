@@ -25,8 +25,9 @@ Example vehicle signals which may be useful for calculating a driving score:
 - Vehicle.Chassis.SteeringWheel.Angle
 - Vehicle.Powertrain.Transmission.CurrentGear
 
+## Where do I get the Drive Data?
 
-Let's continue with `Vehicle.Speed` as an example.
+Let's continue with `Vehicle.Speed` as an example. We provide alternate ways to obtain this information. You can use data from a pre-recorded drive data or you can use an F1Tenth simulated car with autonomous or remote controlled driving. The following sections describe these methods. First using  Eclipse Kuksa's DBC Feeder to read some pre-recorded data, and second using Eclipse Muto to start a F1Tenth simulated car.
 
 ## Run a pre-recorded simulation
 
