@@ -36,13 +36,13 @@
       },
       "cameraState": {
         "perspective": true,
-        "distance": 31.733468832176133,
-        "phi": 60.5574842211631,
-        "thetaOffset": 5.919970870743549,
+        "distance": 31.73346883217536,
+        "phi": 38.597552876465755,
+        "thetaOffset": 76.27390079498619,
         "targetOffset": [
-          -15.090151914397397,
-          2.2687844135057667,
-          4.123853432310975e-16
+          -5.769837610602815,
+          5.0802406636687465,
+          4.186680872599307e-16
         ],
         "target": [
           0,
@@ -138,7 +138,14 @@
       "buttonTooltip": "",
       "buttonColor": "#00A871",
       "advancedView": true,
-      "value": "{\n  \"data\": \"n\"\n}"
+      "value": "{\n  \"data\": \" \"\n}"
+    },
+    "RawMessages!howi23": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/drive"
     }
   },
   "globalVariables": {},
@@ -149,7 +156,11 @@
   },
   "layout": {
     "first": "3D!18i6zy7",
-    "second": "Publish!2rm6me6",
+    "second": {
+      "first": "Publish!2rm6me6",
+      "second": "RawMessages!howi23",
+      "direction": "column"
+    },
     "direction": "row",
     "splitPercentage": 70
   }

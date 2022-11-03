@@ -92,97 +92,76 @@ We'll use a Muto docker image to start a simulated racecar by following the give
 After [installing](https://docs.docker.com/engine/install/ubuntu/) docker on your system;
 
 
-To start the simulator 
+To start the simulator you will need to provide a name to you simualted car, (i.e. bcx-f1tenth-01), and launch your simulation.  Let's assume you named your file example.yaml (you can find a sample [here](sources/muto/example.yaml) ).
+```yaml
+muto:
+  REDUCTED FOR BREVITY
 
+  thing:
+    namespace: org.eclipse.muto.sandbox.f1tenth # subject to change
+    anonymous: False  # Use this for automatically generated id (uuid based - not recommended)
+    name: bcx-f1tenth-01 # <------- THIS IS THE NAME TO EDIT - CHOOSE A UNQIE NAME SO THAT YOU DO NOT WRITE OVER SOMEONE ELSE
+```
+
+then just launch Muto simulation with docker:
 ```bash
-docker run --rm -it -v $(pwd)/example.yaml:/home/muto/launch/config/muto.yaml -p 7777:7777 composiv/muto-demo:latest /bin/bash -c "source devel/setup.bash && roslaunch launch/muto.launch".
+docker run --name muto-demo --rm -it \
+   -v $(pwd)/example.yaml:/home/muto/launch/config/muto.yaml  \
+   -p 7777:7777  \
+   composiv/muto-demo:noetic-ros-base-focal  \
+   /bin/bash -c "source devel/setup.bash && roslaunch launch/demo.launch"
 ```
 
 Here you can substitute your own ```.yaml ``` file for ```example.yaml``` using the command above. It replaces the yaml file then runs the simulator.
 
-- Navigate to `https://dashboard.composiv.ai/`.
+Now the fun part: 
+- Navigate to `https://dashboard.composiv.ai/`.  (If it asks for password, enter ditto for both)
 - In the dashboard go to ``Vehicles``.
-- You need to see that your vehicle is online from `Vehicles --> Vehicle Panel`
+- You need to see that your vehicle is "online" from `Vehicles --> Vehicle Panel`
 - Select the online vehicle.
-
-## Setting Stacks
+![](../assets/muto/dashboard-01.png)
+### Choose a the simulation stack to launch on the car
 
 - Go to ``Stacks``.
-- For the demonstration select `Example - Reactive Gap Follower` and click `set`.
+- For the demonstration select `Example - Reactive Gap Follower` and click `apply`.
 
-Then your stack is set on the designated vehicle. Now you should be able to start the stack on the vehicle by clicking `start`.
-
-
-
-## Foxglove
-
-Now, we'll run the commmands necessary to visualize the simulation through foxglove.
-
-
-- Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777&layoutId=40dfc0af-7cda-4dca-8b6c-d303bfa01543).
-- You can source the [.json](../assets/FoxgloveLayout-F1Tenth.json) file and run the simuation.
-
-![](../assets/simulation.png)
+This will launch the simulation algorithms defined by the stack is on the designated vehicle. Now you should be able to control the stack on the vehicle by clicking `start, stop` etc.
 
 
 
-*IF you have any issues following the steps above, the alternate way to start the simulation is given below*
+### Visualization and controlling the simulation
+
+Now, we'll run the commmands necessary to visualize the simulation using foxglove studio.
+
+
+- Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777).
+- You can import the provided Layout  [foxglove-layout.json](../sources/foxglove-layout.json) file.
+
+![](../assets/muto/foxglove-01.png)
 
 
 
-## Alternate
+*IF you have any issues following the steps above, you can try the following*
 
-- Open your web browser and go to the [foxglove](https://studio.foxglove.dev/?layoutId=6fa30c07-f383-4b8d-9111-09947663e371) webpage.
+- Open your web browser and go to the [foxglove](https://studio.foxglove.dev) webpage.
+- Navigate to ``Open connection``. Use websockets with the value: ``ws://localhost:7777``. (Label 1 in figure above)
 
-The given popup will greet you here. 
+### Controlling the simulation
 
-![](../assets/foxglove1.png)
-
-- Navigate to ``Open connection``. Then the given page will greet you.
+Use the publish topic panel (Label 2 in the figure above). Ff the panel is not open add the panel, after selecting publish, type `/key` into the topic scratch pad. The data type should appear automatically, in case it doesn't, the data type is `std_msgs/String`
 
 
-![](../assets/foxglove2.png)
 
-Here the default value is ``ws://localhost:9090``. 
-
-- Substitute ``9090`` with your desired port ID (the set given to you will have 7777 as the port ID).
-
-- After this step you can click Open.
-
-- Now, you'll need to click `Add Panel` (3rd from the top)
-
-![](../assets/foxglove3.png)
-
-In order for the vehicle to run autonomously you'll need to send the desired input through the multiplexer.
-
-For this to happen you need to add a `publish` panel.
-
-After selecting publish, type `/key` into the topic scratch pad.
-
-The data type should appear automatically, in case it doesn't, the data type is `std_msgs/String`
-
-![](../assets/foxglove4.png)
-
-## Keystroke inputs for publish panel
+#### Keystroke inputs for publish panel
 
 - n : Navigate i.e Autopilot.
-
 - k : Switch the input device to Keyboard.
-
 - w : Go Forward.
-
 - a : Steer Left.
-
 - s : Go Backward.
-
 - d : Steer Right.
 
-
-
-## Add and display telemetry for Drive messages
-
-TODO: 
-
+You can observe the raw messages that rea published to the  `/drive` topic (label 3 in figure above)
 
 
 Next: [Step 2: Architecture and Data Flow](./step-2-architecture-data-flow.md)
