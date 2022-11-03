@@ -100,18 +100,16 @@ muto:
   thing:
     namespace: org.eclipse.muto.sandbox.f1tenth # subject to change
     anonymous: False  # Use this for automatically generated id (uuid based - not recommended)
-    name: bcx-f1tenth-01 # <------- THIS IS THE PLACE TO EDIT
+    name: bcx-f1tenth-01 # <------- THIS IS THE NAME TO EDIT - CHOOSE A UNQIE NAME SO THAT YOU DO NOT WRITE OVER SOMEONE ELSE
 ```
 
 then just launch Muto simulation with docker:
 ```bash
- docker run --name muto-demo --rm -it \
-   -v $(pwd)/docker/demo/src/mutoexamples_bcxcommands:/home/muto/src/mutoexamples_bcxcommands  \
+docker run --name muto-demo --rm -it \
    -v $(pwd)/example.yaml:/home/muto/launch/config/muto.yaml  \
-   -v $(pwd)/example.launch:/home/muto/launch/example.launch  \
    -p 7777:7777  \
    composiv/muto-demo:noetic-ros-base-focal  \
-   /bin/bash -c "source devel/setup.bash && roslaunch launch/example.launch"
+   /bin/bash -c "source devel/setup.bash && roslaunch launch/demo.launch"
 ```
 
 Here you can substitute your own ```.yaml ``` file for ```example.yaml``` using the command above. It replaces the yaml file then runs the simulator.
