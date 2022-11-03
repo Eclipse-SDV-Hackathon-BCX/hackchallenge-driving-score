@@ -137,22 +137,22 @@ Now, we'll run the commmands necessary to visualize the simulation using foxglov
 
 
 - Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777).
-- You can import the provided Layout  [.json](../assets/FoxgloveLayout-F1Tenth.json) file.
+- You can import the provided Layout  [foxglove-layout.json](../sources/foxglove-layout.json) file.
 
-![](../assets/simulation.png)
+![](../assets/muto/foxglove-01.png)
 
 
 
 *IF you have any issues following the steps above, you can try the following*
 
 - Open your web browser and go to the [foxglove](https://studio.foxglove.dev) webpage.
-- Navigate to ``Open connection``. Use websockets with the value: ``ws://localhost:7777``. 
+- Navigate to ``Open connection``. Use websockets with the value: ``ws://localhost:7777``. (Label 1 in figure above)
 
 ### Controlling the simulation
 
-Use the publish topic panel (if it is not open add the panel, after selecting publish, type `/key` into the topic scratch pad. The data type should appear automatically, in case it doesn't, the data type is `std_msgs/String`
+Use the publish topic panel (Label 2 in the figure above). Ff the panel is not open add the panel, after selecting publish, type `/key` into the topic scratch pad. The data type should appear automatically, in case it doesn't, the data type is `std_msgs/String`
 
-![](../assets/foxglove4.png)
+
 
 #### Keystroke inputs for publish panel
 
@@ -163,6 +163,7 @@ Use the publish topic panel (if it is not open add the panel, after selecting pu
 - s : Go Backward.
 - d : Steer Right.
 
+You can observe the raw messages that rea published to the  `/drive` topic (label 3 in figure above)
 
 
 Next: [Step 2: Architecture and Data Flow](./step-2-architecture-data-flow.md)
