@@ -27,11 +27,32 @@ The overall dataflow could like like the following (from bottom to top):
 
 - References: [MDPI Whitepaper](https://www.mdpi.com/2079-9292/8/9/943/htm)
 
+## Alternate Example Architecture (ROS)
+Following is an alternative ROS architecture to extract telemetry data and calculate a driving score using Muto ROS components. 
+Muto in-vehicle approach provides a ROS node `drive_score` that is already subscribed to the topics that capture
+telemetry related information (i.e. steering angle, velocity,acceleration, jerk etc.)
 
-## Example Data Flow (ROS)
+![Example Architecture (ROS)](../assets/Example_Architecture_ROS.png)
 
-TODO:
 
+## Alternate Example Data Flow (ROS)
+A probable flow of data within the ROS domain via `Muto` could sequentially be described as follows:
+- The simulation environment or the JetRacer is the data generation enviroment.
+- Two main ways to produce data in these enviroments:
+    - Running Muto AD algorithms (based on [f1tenth.org](f1tenth.org)) via `Muto Agent`.
+        - Gap Follower
+        - Wall Follower
+        - Automatic Emergency Break
+        - Time Elastic Band
+    - Manually inputting actuator controls via `Muto BCX Command Plugin` that provides a joystick and a keyboard interface.
+- Once the telemetry data is produced, two alternatives for calculating Driving Score.
+    - Feed Kuksa Broker to loop data back to SDV layer (illustrated in the Example Architecture) via `Muto Kuksa-Feeder`.
+    - Make use of a `Muto Drive Score` ROS node that is already subscribed to relevant topics to calculate a driving score.
+- If the ROS way is chosen (i.e. an in-vehicle drive score is calculated in ROS domain ), one could feed `Muto Digital Twin` (based on Eclipse Ditto) via REST to register a driving score.
+- Scores persisted in the Twin Server could be visualized in `Muto Dashboard` by crafting a `Muto LiveUI Widget`.
+
+
+![Example Data Flow (ROS)](../assets/Example_Data_Flow_ROS.png)
 
 ## Hints
 
