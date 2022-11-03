@@ -28,7 +28,9 @@ The overall dataflow could like like the following (from bottom to top):
 - References: [MDPI Whitepaper](https://www.mdpi.com/2079-9292/8/9/943/htm)
 
 ## Alternate Example Architecture (ROS)
-Following is an alternative ROS architecture to extract telemetry data using ROS constructs via Muto. As opposed to the previous architecture Muto provides a ROS node `drive_score` that subscribes to the topics that broadcast telemetry related information (i.e. steering angle, velocity, acceleration, jerk etc.)
+Following is an alternative ROS architecture to extract telemetry data and calculate a driving score using Muto ROS components. 
+Muto in-vehicle approach provides a ROS node `drive_score` that is already subscribed to the topics that capture
+telemetry related information (i.e. steering angle, velocity,acceleration, jerk etc.)
 
 ![Example Architecture (ROS)](../assets/Example_Architecture_ROS.png)
 
