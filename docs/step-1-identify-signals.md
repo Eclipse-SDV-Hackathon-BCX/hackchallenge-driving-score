@@ -135,7 +135,7 @@ Now, we'll run the commmands necessary to visualize the simulation using foxglov
 
 
 - Go to the given [link](https://studio.foxglove.dev/?ds=rosbridge-websocket&ds.url=ws%3A%2F%2Flocalhost%3A7777).
-- You can import the provided Layout  [foxglove-layout.json](../sources/foxglove-layout.json) file.
+- You can import the provided Layout  [foxglove-layout.json](../sources/muto/foxglove-layout.json) file.
 
 ![](../assets/muto/foxglove-01.png)
 
