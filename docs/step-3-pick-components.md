@@ -24,12 +24,12 @@ This list of components is based on the example architecture and data flow. If y
 
 TODO: ROS/Muto/Kuksa/Ditto
 
-// Eclipse Muto Agent & Composer: To manage stacks running on the device etc.
-// Eclipse Kuksa.VAL Data Feeder for Muto: Shares AckermannDriveMessages in the form of VSS (@sven.erik)
-// Muto YAML based Configuration: To configure vehicle, algs and plugins.
-// Muto Stacks: To choose and manage the lifecycle of what runs on the device.
-// ROS Based Drive Score Computation: A python based ROS node that consumes Ackermann Drive Data and computes a drive score and sends it to Digital Twin as a feature.
-// Muto Dashboard Plugins: A user interface to control vehicles and visualize data.
+- Eclipse Muto Agent & Composer: To manage stacks running on the device etc.
+- Eclipse Kuksa.VAL Data Feeder for Muto: Shares AckermannDriveMessages in the form of VSS (@sven.erik)
+- Muto YAML based Configuration: To configure vehicle, algs and plugins.
+- Muto Stacks: To choose and manage the lifecycle of what runs on the device.
+- ROS Based Drive Score Computation: A python based ROS node that consumes Ackermann Drive Data and computes a drive score and sends it to Digital Twin as a feature.
+- Muto Dashboard Plugins: A user interface to control vehicles and visualize data.
 
 
 
