@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="muto" default="$(dirname)/.." />
+
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+        <arg name="port" value="7777"/>
+    </include>
+
+    <node pkg="muto_agent" name="muto_agent" type="muto_agent.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+    <node pkg="muto_composer" name="muto_composer" type="muto_composer.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+
+    <node pkg="muto_composer" name="composer_plugin" type="composer_plugin.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+    <node pkg="muto_composer" name="launch_plugin" type="launch_plugin.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+    <node pkg="mutoexamples_bcxcommands" name="bcx_commandplugin" type="bcx_commandplugin.py" output="screen">
+    </node>
+
+</launch>
