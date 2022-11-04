@@ -101,7 +101,7 @@ export const VehicleCard = ({ vehicle }) => {
       isSelectableRaised
       onClick={() => {
         history.push({
-          pathname: `/vehicle/${vehicle?.thingId}`,
+          pathname: `/f1tenth/${vehicle?.thingId}`,
           state: { vehicle }
         })
       }}
