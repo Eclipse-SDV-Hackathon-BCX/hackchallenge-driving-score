@@ -20,7 +20,7 @@ This list of components is based on the example architecture and data flow. If y
 - Use Docker to build, package and deploy your app to a container registry.
 - A container registry, eg GitHub packages, Docker Hub, canister.io or https://ttl.sh/
 - [Eclipse Leda](https://github.com/eclipse-leda/leda-distro) quickstart images on the provided SD-Cards during the hackathon for your target devices. If you need to reflash, you can download a [snapshot Leda build for Raspberry Pi 4](https://swdcdownloads.blob.core.windows.net/%24web/sdv-image-all-raspberrypi4-64.wic.bz2)
-- [SOAFEE EWAOL](https://ewaol.docs.arm.com/en/kirkstone-dev/) provides containerisation and virtualisation capabilities within a light Linux-based distro. Secure isolation of vehicle function domains is crucial - the Xen type-1 hypervisor provides part of this isolation. Try a microSD card with an appropriate image preloaded for the Raspberry Pi 4 at the event.
+- [SOAFEE EWAOL](https://ewaol.docs.arm.com/en/kirkstone-dev/) provides containerisation and virtualisation capabilities within a light Linux-based distro. Secure isolation of vehicle function domains is crucial - the Xen type-1 hypervisor provides part of this isolation. Try a microSD card with an appropriate image preloaded for the Raspberry Pi 4 at the event. An image of Eclipse Leda has been built which can run under the hypervisor in SOAFEE EWAOL [here](https://github.com/benmordaunt/meta-leda/releases/tag/eclipse-leda-xen-rc1). You may use [ubuntu-xenguest.conf](https://github.com/benjaminmordaunt/sdv-hackathon-cfg3/blob/main/xencfg/ubuntu-xenguest.conf) as a reference for creating a suitable Xen guest definition.
 
 ## Example List of components (ROS)
 
