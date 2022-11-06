@@ -24,14 +24,12 @@ This list of components is based on the example architecture and data flow. If y
 
 ## Example List of components (ROS)
 
-TODO: ROS/Muto/Kuksa/Ditto
-
-- Eclipse Muto Agent & Composer: To manage stacks running on the device etc.
+- Eclipse Muto Agent & Composer: To manage stacks running on the device etc. Follow the instructions at the Eclipse Muto [Documentation](https://eclipse-muto.github.io/docs/docs/muto-edge/getting-started/by-example), and the Eclipse Muto for the JetRacer [here](https://github.com/Eclipse-SDV-Hackathon-BCX/.github/blob/main/profile/JetRacer.md)
 - Eclipse Kuksa.VAL Data Feeder for Muto: Shares AckermannDriveMessages in the form of VSS (@sven.erik)
-- Muto YAML based Configuration: To configure vehicle, algs and plugins.
+- Muto YAML based [Configuration](https://eclipse-muto.github.io/docs/docs/muto-edge/getting-started/by-example): To configure vehicle, algorithms and plugins.
 - Muto Stacks: To choose and manage the lifecycle of what runs on the device.
-- ROS Based Drive Score Computation: A python based ROS node that consumes Ackermann Drive Data and computes a drive score and sends it to Digital Twin as a feature.
-- Muto Dashboard Plugins: A user interface to control vehicles and visualize data.
+- ROS Based Drive Score Computation: A python based ROS node that consumes Ackermann Drive Data and computes a drive score and sends it to Digital Twin as a feature. (See ROS python development guides [here](http://wiki.ros.org/ROS/Tutorials/CreatingPackage) and [examples](https://github.com/composiv/jetracer_example) for the JetRacer)
+- Muto Dashboard Plugins: A user interface to control vehicles and visualize data [dashboard by example](https://eclipse-muto.github.io/docs/docs/muto-edge/getting-started/dashboard-by-example).
 
 
 
