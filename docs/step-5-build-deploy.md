@@ -23,5 +23,5 @@
 
 
 ## Deployment on a JetRacer with Eclipse Muto
-- For the hackathon, you can continue to use the simulator environment or deploy your system to one of the SDV Fleet testcars with muto. TODO: (Link)
+- For the hackathon, you can continue to use the simulator environment or deploy your system to one of the SDV Fleet testcars with muto. Follow the [instructions for running Eclipse Muto on the JetRacer](https://github.com/composiv/jetracer_example) or here [JetRacer Nano for the Hackathon](https://github.com/Eclipse-SDV-Hackathon-BCX/.github/blob/main/profile/JetRacer.md)
 
