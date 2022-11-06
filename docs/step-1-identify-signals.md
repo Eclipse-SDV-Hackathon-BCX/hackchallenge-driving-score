@@ -33,27 +33,26 @@ Let's continue with `Vehicle.Speed` as an example. We provide alternate ways to 
 
 We'll be using Eclipse Kuksa's DBC Feeder to read some pre-recorded data and feed it into the data broker, so that we can see how te data looks like.
 
-1. Run [Eclipse Kuksa.VAL Data Broker](https://github.com/eclipse/kuksa.val/tree/master/kuksa_databroker):
+1. Run Visual Studio Code task called `Start Vehicle App runtime` to run runtime services (like Eclipse Kuksa's DBC Feeder or Eclipse Kuksa`s Data Broker) in the correct order.
+   - Press `F1`
+   - Select command Tasks: `Run Task`
+   - Select `Start VehicleApp runtime`
+   - Choose `Continue without scanning the output`
 
-        docker run --rm -it -p 55555:55555/tcp ghcr.io/eclipse/kuksa.val/databroker:master
-
-2. Run the Eclipse Kuksa.VAL DBC2VAL Feeder
+    You should see the tasks `run-mosquitto`, `run-vehicledatabroker`, `run-vehicleservices` and `run-feedercan` being executed in the Visual Studio Code       output panel.
     
-        git clone https://github.com/eclipse/kuksa.val.feeders
-        cd kuksa.val.feeders/dbc2val
-        python3 ./dbcfeeder.py
-
-    *Hint:* You may need to fix the dbcfeeder.py to allow truncated values, as there is a [known issue](https://github.com/eclipse/kuksa.val/issues/374)
-
-    You can now see which vehicle signals are found in the recorded data file.
-
+    The terminal of the `run-feedercan` task should look like:
+    
     ![](../assets/kuksa-dbc-speed.png)
+    
+    More information about the tasks are available [here](https://websites.eclipseprojects.io/velocitas/docs/tutorials/vehicle-app-runtime/run_runtime_services_locally/).
 
-3. Run the databroker-cli
-
-        git clone https://github.com/eclipse/kuksa.val
-        cd kuksa.val/kuksa_databroker
-        cargo run --bin databroker-cli
+2. Run the `VehicleDataBroker-CLI` using Visual Studio Code task
+   - Press `F1`
+   - Select command Tasks: `Run Task`
+   - Select `Start VehicleApp runtime`
+   - Choose `Continue without scanning the output`
+    
 
     Type `get veh&lt;tab&gt;sp&lt;tab&gt;`, which will expand to `get Vehicle.Speed`
 
