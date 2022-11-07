@@ -50,7 +50,7 @@ We'll be using Eclipse Kuksa's DBC Feeder to read some pre-recorded data and fee
 2. Run the `VehicleDataBroker-CLI` using Visual Studio Code task
    - Press `F1`
    - Select command Tasks: `Run Task`
-   - Select `Start VehicleApp runtime`
+   - Select `VehicleDataBroker-CLI`
    - Choose `Continue without scanning the output`
     
 
