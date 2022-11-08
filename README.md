@@ -1,5 +1,8 @@
 # Eclipse SDV Hackathon on BCX2022
 
+_*** Updated 2022-11-08 13:37 - [KNOWN_ISSUES.md](./KNOWN_ISSUES.md) ***_
+
+
 One-Pager ([PowerPoint](./assets/BCX_Onepager_DriverScore_A0.pptx), [PDF](./assets/BCX_Onepager_DriverScore_A0.pdf))
 
 # Welcome to the "Driving Score" hack challenge!
