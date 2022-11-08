@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="muto" default="$(dirname)/.." />
+
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+        <arg name="port" value="7777"/>
+    </include>
+
+    <node pkg="muto_agent" name="muto_agent" type="muto_agent.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+    <node pkg="muto_composer" name="muto_composer" type="muto_composer.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+
+    <node pkg="muto_composer" name="composer_plugin" type="composer_plugin.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+    <node pkg="muto_composer" name="launch_plugin" type="launch_plugin.py" output="screen">
+        <rosparam command="load" file="$(arg muto)/launch/config/muto.yaml" />
+    </node>
+
+    <node pkg="ackermann2kuksa" name="ackermann2kuksa" type="ackermann_to_kuksa.py" respawn="true" output="screen">
+        <param name="kuksa_ip" value="kuksa"/>
+        <param name="kuksa_port" value="55556"/>
+    </node>
+
+</launch>
